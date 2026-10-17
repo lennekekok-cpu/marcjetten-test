@@ -41,9 +41,8 @@
 .hero,.hero>img,.photo a,.craftsman-gallery .photo a,.photo img,.project .photo img,dialog .viewer img{border-radius:var(--photo-radius)}
 
 /* Twee beelden van hetzelfde project delen één kader en bijschrift. */
-.photo-pair{grid-column:span 2}
-.photo-pair__frame{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:8px;background:#ebe6df;border-radius:var(--photo-radius);overflow:hidden;box-shadow:0 3px 16px rgba(42,32,25,.045)}
-.photo-pair .photo-pair__image{min-width:0;padding:0;box-shadow:none}
-.photo-pair .photo-pair__image img{width:100%;height:100%;aspect-ratio:4/5;object-fit:contain}
-.photo-pair .photo--cover img{object-fit:cover}
+.photo-pair{grid-column:auto}
+.photo-pair__frame{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:minmax(0,1fr);aspect-ratio:4/5;gap:8px;padding:8px;background:#ebe6df;border-radius:var(--photo-radius);overflow:hidden;box-shadow:0 3px 16px rgba(42,32,25,.045)}
+.photo-pair .photo-pair__image{min-width:0;min-height:0;height:100%;aspect-ratio:auto;padding:0;box-shadow:none}
+.photo-pair .photo-pair__image img{width:100%;height:100%;min-height:0;aspect-ratio:auto;object-fit:contain}
 @media(max-width:480px){.photo-pair__frame{gap:6px;padding:6px}}
