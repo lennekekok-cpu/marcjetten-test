@@ -36,3 +36,6 @@
 
 /* Roze typografie bij het oorspronkelijke woordmerk. */
 .hero .eyebrow,.hero .subtitle{font-family:Arial,Helvetica,sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:1.6px}.hero .subtitle{color:var(--accent);font-size:clamp(15px,1.5vw,19px);line-height:1.8;margin-bottom:0}.faq-item p+p{margin-top:16px}
+/* Alle foto's krijgen dezelfde subtiele afronding, ook binnen een kader. */
+:root{--photo-radius:12px}
+.hero,.hero>img,.photo a,.craftsman-gallery .photo a,.photo img,.project .photo img,dialog .viewer img{border-radius:var(--photo-radius)}
